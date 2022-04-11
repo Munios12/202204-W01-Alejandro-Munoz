@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Pasapalabra - by Alex M.</title>
+</head>
+<body>
+    <div class="pasapalabra__game">
+        <div class="rosco circle">
+            <div class="rosco__list">
+                <div class="circle letter" id ='letter__0'>A</div>
+                <div class="circle letter" id ='letter__1'>B</div>
+                <div class="circle letter" id ='letter__2'>C</div>
+                <div class="circle letter" id ='letter__3'>D</div>
+                <div class="circle letter" id ='letter__4'>E</div>
+                <div class="circle letter" id ='letter__5'>F</div>
+                <div class="circle letter" id ='letter__6'>G</div>
+                <div class="circle letter" id ='letter__7'>H</div>
+                <div class="circle letter" id ='letter__8'>I</div>
+                <div class="circle letter" id ='letter__9'>J</div>
+                <div class="circle letter" id ='letter__10'>K</div>
+                <div class="circle letter" id ='letter__11'>L</div>
+                <div class="circle letter" id ='letter__12'>M</div>
+                <div class="circle letter" id ='letter__13'>N</div>
+                <div class="circle letter" id ='letter__14'>Ñ</div>
+                <div class="circle letter" id ='letter__15'>O</div>
+                <div class="circle letter" id ='letter__16'>P</div>
+                <div class="circle letter" id ='letter__17'>Q</div>
+                <div class="circle letter" id ='letter__18'>R</div>
+                <div class="circle letter" id ='letter__19'>S</div>
+                <div class="circle letter" id ='letter__20'>T</div>
+                <div class="circle letter" id ='letter__21'>U</div>
+                <div class="circle letter" id ='letter__22'>V</div>
+                <div class="circle letter" id ='letter__23'>W</div>
+                <div class="circle letter" id ='letter__24'>X</div>
+                <div class="circle letter" id ='letter__25'>Y</div>
+                <div class="circle letter" id ='letter__26'>Z</div>
+            </div>
+            
+        </div>
+        <div class="rigth__section">
+            <button class="start__button" id="start">EMPEZAR</button>
+            <div class="hidden" id="panel">
+                <h4 id="question" ></h4>
+                <div class="actions__section">
+                    <input id='answer' type="text" name="answerField" placeholder="Respuesta" class="input">
+                    <button id= 'check' class="check btn">RESPONDER</button>
+                    <button id='save-word' class="pasapalabra btn">PASAPALABRA</button>
+                </div>
+                <div class="timer__container">
+                    <div class="rosco__timer" id="countdown">150</div>
+                </div>
+            </div>
+            <div class="hidden" id="score-panel">
+                <h1>FIN DEL JUEGO</h1>
+                <h3 class="correct__answer" id="correct-answer"></h3>
+                <h3 class="incorrect__answer" id="incorrect-answer"></h3>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

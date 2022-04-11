@@ -1,0 +1,174 @@
+$num-elements: 27;
+$angle: 360/$num-elements;
+$radious: 600px;
+$circle-size: 60px;
+$background-circle: blue;
+$rot:270;
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    height: 100vh;
+    background-color: #508EFE;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pasapalabra__game{
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.rigth__section{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.actions__section{
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.btn{
+    height: 50px;
+    border-radius: 1px;
+    color: white;
+    padding: 14px;
+    font-size: 1rem;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-style: none;
+    border: 1px solid rgb(180, 180, 180);
+}
+
+.check{
+    background-color: rgb(50, 177, 39);
+}
+
+.check:hover{
+    background-color: rgb(24, 114, 16);
+}
+
+.check:active{
+    background-color: rgb(20, 97, 13);
+}
+
+.pasapalabra {
+    background-color: rgb(29, 98, 201);
+}
+
+.pasapalabra:hover {
+    background-color: rgb(28, 81, 161);
+}
+
+.pasapalabra:active {
+    background-color: rgb(8, 49, 112);
+}
+
+.input{
+    height: 50px;
+    padding: 14px;
+    outline: none;
+    border-radius: 1px;
+    border-style: none;
+}
+
+.hidden{
+    display: none;
+}
+
+.rosco{
+    width: $radious;
+    height: $radious;
+    border-radius: 50%;
+}
+
+.rosco__list div{
+    align-items: center;
+    background-color: $background-circle;
+    border: 3px solid rgb(199, 199, 199);
+    border-radius: 50%;
+    color: whitesmoke;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 900;
+    height: $circle-size;
+    justify-content: center;
+    list-style: none;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.5);
+    margin: -($circle-size)/2;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: $circle-size;
+}
+
+.timer__container{
+    width: 100%;
+    display: flex;
+    align-items:flex-start;
+}
+
+.rosco__timer{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 50%;
+    border: 2px solid rgb(215, 218, 243);
+    height: 80px;
+    padding: 5px;
+    font-size: 1.5rem;
+    width: 80px;
+    background-color: blue;
+    color: white;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+.start__button{
+    background-color: #1022c4;
+    padding: 10px;
+    color: white;
+    border-radius: 25px;
+    border-style: none;
+    font-size: 1.2rem;
+    border: 2px solid rgb(180, 180, 180);
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    height: 50px;
+    width: 400px;
+}
+
+.start__button:hover {
+    background-color: rgb(7, 26, 136);
+}
+
+.start__button:active {
+    background-color: rgb(4, 31, 73);
+}
+
+@for $i from 1 through $num-elements {
+
+    .rosco__list div:nth-child(#{$i}) {
+        transform: rotate($rot * 1deg) translate($radious/2) rotate($rot * -1deg);
+    }
+
+    $rot: $rot + $angle;
+
+} 
+
+
